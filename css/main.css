@@ -1,20 +1,40 @@
 /* ---------- root variables ---------- */
 :root {
-  --green: rgb(38, 76, 89);
-  --light-green: rgb(172, 198, 201);
-  --light-grey: #f1f1f4;
-  --text-color-light: #f1f1f1;
-  --text-color-dark: #333;
+  --white: rgb(248, 248, 248);
+  --black: rgb(20, 20, 20);
+  --light-grey: #969696;
 }
+
+/*
+Arboria Book Italic
+font-family: arboria, sans-serif;
+font-weight: 400;
+font-style: italic;
+
+Arboria Book
+font-family: arboria, sans-serif;
+font-weight: 400;
+font-style: normal;
+
+Arboria Medium
+font-family: arboria, sans-serif;
+font-weight: 500;
+font-style: normal;
+
+Arboria Bold
+font-family: arboria, sans-serif;
+font-weight: 700;
+font-style: normal;
+*/
 
 /* ---------- general styling ---------- */
 html {
-  color: var(--text-color-dark);
-  font-family: Helvetica, Arial, sans-serif;
+  color: var(--black);
+  font-family: arboria, sans-serif;
   height: 100%;
-  text-align: center;
   width: 100%;
-  font-weight: 200;
+  font-weight: 400;
+  background-color: var(--white);
 }
 
 body {
@@ -37,7 +57,7 @@ h1 {
 .topbar {
   background-color: transparent;
   padding: 2em 0;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .topbar h2 {
@@ -63,21 +83,18 @@ header {
 
 /* ---------- tabbar styling ---------- */
 .tabbar {
-  background-color: var(--green);
-  margin: auto;
-  width: 100%;
+  text-align: end;
+  width: 95%;
 }
 
 /* Style the links inside the navigation bar */
 .tabbar a {
   display: inline-block;
   color: var(--text-color-light);
-  text-align: center;
-  padding: 20px 16px;
+  padding: 30px 16px;
   text-decoration: none;
-  font-size: 0.8em;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 0.08em;
 }
 
 /* Change the color of links on hover */
@@ -100,9 +117,11 @@ header {
 
 /* ---------- logo styling ---------- */
 .logo {
-  margin: 2em auto;
+  position: absolute;
+  padding-left: 5%;
+  margin: 30px auto;
   width: 100%;
-  max-width: 150px;
+  max-width: 120px;
 }
 
 /* ---------- animations ---------- */
