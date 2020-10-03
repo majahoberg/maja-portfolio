@@ -1,6 +1,6 @@
 /* ---------- root variables ---------- */
 :root {
-  --white: rgb(248, 248, 248);
+  --white: #FCFCFC;
   --black: rgb(20, 20, 20);
   --light-grey: #969696;
 }
@@ -47,6 +47,13 @@ h1 {
   letter-spacing: 3px;
 }
 
+p {
+  margin: 0 auto;
+  width: 453px;
+  font-size: 15pt;
+  line-height: 22pt;
+}
+
 /* ---------- Grid container ---------- */
 .grid-container {
   display: grid;
@@ -56,13 +63,15 @@ h1 {
 /* ---------- topbar styling ---------- */
 .topbar {
   background-color: transparent;
-  padding: 2em 0;
-  text-transform: capitalize;
+  padding: 1.5em 0;
 }
 
 .topbar h2 {
   margin: 0;
-  font-weight: 300;
+  font-weight: 700;
+  font-size: 35pt;
+  text-align: center;
+  margin-top: 150px;
 }
 
 /* ---------- header styling ---------- */
@@ -91,23 +100,38 @@ header {
 .tabbar a {
   display: inline-block;
   color: var(--text-color-light);
-  padding: 30px 16px;
+  padding: 30px 16px 10px 16px;
   text-decoration: none;
   font-size: 1em;
   letter-spacing: 0.08em;
+  position: relative;
 }
 
-/* Change the color of links on hover */
-.tabbar a:hover {
-  background-color: var(--light-grey);
-  color: var(--text-color-dark);
+.tabbar a, 
+.tabbar a:after,
+.tabbar a:before {
+  transition: all .5s;
 }
 
-/* Add a color to the active/current link */
-.tabbar a.active {
-  background-color: var(--light-green);
-  color: var(--text-color-light);
+#stroke a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: var(--black);
+  height: 2px;
 }
+
+
+#stroke a:hover:after {
+  width: 50%;
+}
+
+
 
 /* ---------- page styling ---------- */
 .page {
