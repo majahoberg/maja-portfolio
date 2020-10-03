@@ -105,12 +105,14 @@ header {
   font-size: 1em;
   letter-spacing: 0.08em;
   position: relative;
+  font-weight: 500;
+  opacity: 0.5;
 }
 
 .tabbar a, 
 .tabbar a:after,
 .tabbar a:before {
-  transition: all .5s;
+  transition: all .7s;
 }
 
 #stroke a:after {
@@ -128,10 +130,13 @@ header {
 
 
 #stroke a:hover:after {
-  width: 50%;
+  width: 45%;
 }
 
-
+#stroke a:hover {
+  opacity: 1;
+}
+      
 
 /* ---------- page styling ---------- */
 .page {
