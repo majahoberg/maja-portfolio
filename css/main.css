@@ -144,6 +144,23 @@ header {
 }
 
 
+/* ---------- projects page styling ---------- */ 
+
+.arrowdown {
+  margin-top: 18%;
+  text-align: center;
+  width: 100%;
+}
+
+
+.arrowdown img {
+  width: 50px;
+  animation-name: jump;
+  animation-delay: 4s;
+  animation-duration: 1.7s;
+  animation-iteration-count: 4;
+  transform: translate(-50%, -50%);
+}
 
 
 
@@ -209,4 +226,14 @@ a::-moz-selection {
   to {
     opacity: 1
   }
+}
+
+@keyframes jump {
+  0% { transform: translate(-50%, -50%);}
+  50% { transform: translate(-50%, -150%);}
+  55% { transform: translate(-50%, -150%) rotate(10deg); }
+  60% { transform: translate(-50%, -150%) rotate(-10deg); }
+  65% { transform: translate(-50%, -150%) rotate(10deg); }
+  70% { transform: translate(-50%, -150%) rotate(-10deg); }
+  100% { transform: translate(-50%, -50%);}
 }
