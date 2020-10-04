@@ -41,6 +41,14 @@ body {
   margin: 0;
 }
 
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	cursor: pointer;
+  outline: inherit;
+}
+
 h1 {
   font-size: 2em;
   font-weight: 300;
@@ -54,10 +62,66 @@ p {
   line-height: 22pt;
 }
 
-/* ---------- Grid container ---------- */
-.grid-container {
-  display: grid;
-  grid-template-columns: 33.33% 33.33% 33.33%;
+/* ---------- tabbar styling ---------- */
+.tabbar {
+  text-align: end;
+  width: 95%;
+}
+
+/* ---------- Style the links inside the navigation bar ---------- */
+.tabbar a {
+  display: inline-block;
+  color: var(--text-color-light);
+  padding: 30px 16px 10px 16px;
+  text-decoration: none;
+  font-size: 1em;
+  letter-spacing: 0.08em;
+  position: relative;
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+.tabbar a, 
+.tabbar a:after,
+.tabbar a:before {
+  transition: all .7s;
+}
+
+/* ---------- stroke / line under tabbar ---------- */ 
+#stroke a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: var(--black);
+  height: 2px;
+}
+
+#stroke a:hover:after {
+  width: 45%;
+}
+
+#stroke a:hover {
+  opacity: 1;
+}
+
+/* ---------- page styling ---------- */
+.page {
+  display: none;
+  animation: fadeIn 0.4s;
+}
+
+/* ---------- logo styling ---------- */
+.logo {
+  position: absolute;
+  padding-left: 5%;
+  margin: 30px auto;
+  width: 100%;
+  max-width: 120px;
 }
 
 /* ---------- topbar styling ---------- */
@@ -79,78 +143,60 @@ header {
   background-color: var(--green);
 }
 
-.img-col img {
-  max-width: 200px;
-  margin: 0;
-  position: absolute;
-  bottom: 0;
+
+
+
+
+
+
+
+
+/* ---------- text selection color ---------- */
+p::selection {
+  background: #F8484F;
+  color: var(--white);
+}
+p::-moz-selection {
+  background: #F8484F;
+  color: var(--white);
 }
 
-.grid-container section {
-  position: relative;
+h1::selection {
+  background: #F8484F;
+  color: var(--white);
 }
 
-/* ---------- tabbar styling ---------- */
-.tabbar {
-  text-align: end;
-  width: 95%;
+h1::-moz-selection {
+  background: #F8484F;
+  color: var(--white);
 }
 
-/* Style the links inside the navigation bar */
-.tabbar a {
-  display: inline-block;
-  color: var(--text-color-light);
-  padding: 30px 16px 10px 16px;
-  text-decoration: none;
-  font-size: 1em;
-  letter-spacing: 0.08em;
-  position: relative;
-  font-weight: 500;
-  opacity: 0.5;
+h2::selection {
+  background: #F8484F;
+  color: var(--white);
 }
 
-.tabbar a, 
-.tabbar a:after,
-.tabbar a:before {
-  transition: all .7s;
+h2::-moz-selection {
+  background: #F8484F;
+  color: var(--white);
 }
 
-#stroke a:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 0%;
-  content: '.';
-  color: transparent;
-  background: var(--black);
-  height: 2px;
+img::selection {
+  background: #F8484F;
 }
 
-
-#stroke a:hover:after {
-  width: 45%;
+img::-moz-selection {
+  background: #F8484F;
 }
 
-#stroke a:hover {
-  opacity: 1;
-}
-      
-
-/* ---------- page styling ---------- */
-.page {
-  display: none;
-  animation: fadeIn 0.4s;
+a::selection {
+  background: #F8484F;
+  color: var(--white);
 }
 
-/* ---------- logo styling ---------- */
-.logo {
-  position: absolute;
-  padding-left: 5%;
-  margin: 30px auto;
-  width: 100%;
-  max-width: 120px;
+a::-moz-selection {
+  background: #F8484F;
+  color: var(--white);
 }
 
 /* ---------- animations ---------- */
